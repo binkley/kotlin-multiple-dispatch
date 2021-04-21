@@ -25,19 +25,14 @@ Try `./batect run` for a demonstration as CI would.
 ## TOC
 
 * [Build and try](#build-and-try)
-* [Multiple dispatch](#multiple-dispatch)
 * [Examples](#examples)
 * [Reading](#reading)
 
 ---
 
-## Multiple dispatch
-
----
-
 ## Examples
 
-Multiple dispatch for this matrix of combinations:
+This project demonstrates multiple dispatch for a matrix of combinations:
 
 | | Reset | Name (M1) | Name (M2)
 | - | :-: | :-: | :-:
@@ -47,6 +42,12 @@ Multiple dispatch for this matrix of combinations:
 | **M2** | _A_ | _D_ | _E_
 
 Each capital letter represents a separate unique or shared implementation.
+
+See [`main`](./src/main/kotlin/hm/binkley/labs/Main.kt) for a starting
+point.  [`register(lambda)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
+updates the dispatch table;
+[`dispatch(device, component)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
+looks up and dispatches the corresponding lambda.
 
 ---
 
