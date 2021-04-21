@@ -24,7 +24,8 @@ Try `./batect run` for a demonstration as CI would.
 
 ## Examples
 
-This project demonstrates multiple dispatch for a matrix of combinations:
+This project demonstrates multiple dispatch for a matrix of combinations.
+Devices run down the left; commands are across the top:
 
 | | Reset | Name (M1) | Name (M2)
 | - | :-: | :-: | :-:
