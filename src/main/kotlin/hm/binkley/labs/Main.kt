@@ -37,7 +37,8 @@ private inline fun <reified D : Device<D>, reified C : Command<C>> demo(
     command: C,
 ) {
     try {
-        println(dispatch(device, command))
+        val result = dispatch(device, command)
+        println("$result <- ${command::class.simpleName} sent to $device")
     } catch (e: MissingMethodException) {
         println("BUG: ${e.message}")
     }
