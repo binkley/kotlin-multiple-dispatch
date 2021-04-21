@@ -42,6 +42,25 @@ updates the dispatch table;
 [`dispatch(device, component)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
 looks up and dispatches the corresponding lambda.
 
+### Why not other approaches?
+
+Consider this scratch snippet:
+
+```kotlin
+fun Device<*>.xxx(command: Command<*>): Int =
+  throw MissingMethodException(this, command)
+fun M1ADevice.xxx(command: ResetCommand) = 3
+
+fun main() {
+  // ResetCommand is an singleton object; other values are defined elsewhere
+  m1aDevice.xxx(ResetCommand) // Calls the first `xxx` fun, above
+  m1aDevice.xxx(timeCommand) // Also calls the first `xxx` fun
+}
+```
+
+The compiler correctly warns that `M1ADevice.xxx(TimeCommand)` is never
+called: Extension functions do not consider type specialization.
+
 ---
 
 ## Reading
