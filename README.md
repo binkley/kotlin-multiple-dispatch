@@ -51,3 +51,15 @@ Each capital letter represents a separate unique or shared implementation.
 ---
 
 ## Reading
+
+* [_A polyglot's guide to multiple
+  dispatch_](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch/)
+  ([part 2](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch-part-2/),
+  [part 3](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch-part-3/),
+  [part 4](https://eli.thegreenplace.net/2016/a-polyglots-guide-to-multiple-dispatch-part-4/))
+* [_An Introduction to Invoke Dynamic in the
+  JVM_](https://www.baeldung.com/java-invoke-dynamic) (Java 7+)
+* [_Multimethods and
+  Hierarchies_](https://clojure.org/reference/multimethods) (Clojure)
+* [_Multiple dispatch_](https://en.wikipedia.org/wiki/Multiple_dispatch)
+  (overview)
