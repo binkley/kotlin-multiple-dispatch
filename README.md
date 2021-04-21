@@ -40,11 +40,13 @@ Try `./batect run` for a demonstration as CI would.
 Multiple dispatch for this matrix of combinations:
 
 | | Reset | Name (M1) | Name (M2)
-| - | - | - | -
-| M1A | A | B | -
-| M1B | A | C | -
-| M2 | A | D | E
+| - | :-: | :-: | :-:
+| **Dummy** | _A_ | - | -
+| **M1A** | _A_ | _B_ | -
+| **M1B** | _A_ | _C_ | -
+| **M2** | _A_ | _D_ | _E_
 
+Each capital letter represents a separate unique or shared implementation.
 
 ---
 
