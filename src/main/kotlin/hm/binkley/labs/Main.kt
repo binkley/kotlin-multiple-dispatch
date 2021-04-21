@@ -1,15 +1,15 @@
 package hm.binkley.labs
 
+private val m1aDevice = M1ADevice(123L)
+private val m1bDevice = M1BDevice(456L)
+private val m2Device = M2Device(456L, "SG")
+
+private val timeCommand = TimeCommand(1L)
+private val m1NameCommand = M1NameCommand("BOB")
+private val m2NameCommand = M2NameCommand("BOB", "NANCY")
+
 fun main() {
     registerAll()
-
-    val m1aDevice = M1ADevice(123L)
-    val m1bDevice = M1BDevice(456L)
-    val m2Device = M2Device(456L, "SG")
-
-    val timeCommand = TimeCommand(1L)
-    val m1NameCommand = M1NameCommand("BOB")
-    val m2NameCommand = M2NameCommand("BOB", "NANCY")
 
     demo(DummyDevice, ResetCommand)
     demo(DummyDevice, timeCommand)
