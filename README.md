@@ -26,11 +26,25 @@ Try `./batect run` for a demonstration as CI would.
 
 * [Build and try](#build-and-try)
 * [Multiple dispatch](#multiple-dispatch)
+* [Examples](#examples)
 * [Reading](#reading)
 
 ---
 
 ## Multiple dispatch
+
+---
+
+## Examples
+
+Multiple dispatch for this matrix of combinations:
+
+| | Reset | Name (M1) | Name (M2)
+| - | - | - | -
+| M1A | A | B | -
+| M1B | A | C | -
+| M2 | A | D | E
+
 
 ---
 

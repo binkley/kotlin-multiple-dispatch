@@ -12,8 +12,22 @@ internal class MainTest {
         }
 
         out shouldBe """
-            3
-            BUG: hm.binkley.labs.MissingMethodException: Missing method for TimeCommand(millisSinceEpoch=0) to DummyDevice
+3
+2
+BUG: Unsupported: M1NameCommand to Dummy
+BUG: Unsupported: M2NameCommand to Dummy
+3
+17
+6
+BUG: Unsupported: M2NameCommand to M1-A/123
+3
+17
+9
+BUG: Unsupported: M2NameCommand to M1-B/456
+3
+18
+3
+8
         """.trimIndent() + "\n"
     }
 }

@@ -1,8 +1,7 @@
 package hm.binkley.labs
 
 object DummyDevice : Device<DummyDevice> {
-    @Suppress("UNUSED_PARAMETER")
-    fun runReset(c: ResetCommand): Int = 3
+    fun runTime(c: TimeCommand) = (2 * c.millisSinceEpoch).toInt()
 
-    override fun toString() = this::class.simpleName!!
+    override fun toString() = "Dummy"
 }

@@ -12,9 +12,9 @@ internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
 }
 
 private val dispatchTable: MutableMap<
-        Pair<KClass<Device<*>>, KClass<Command<*>>>,
-            (Device<*>, Command<*>) -> Int
-        > = mutableMapOf()
+    Pair<KClass<Device<*>>, KClass<Command<*>>>,
+    (Device<*>, Command<*>) -> Int
+    > = mutableMapOf()
 
 internal inline fun <reified D : Device<D>, reified C : Command<C>> dispatch(
     device: D,
