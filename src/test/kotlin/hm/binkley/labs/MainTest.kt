@@ -12,10 +12,6 @@ internal class MainTest {
         }
 
         out shouldBe """
-3 <- ResetCommand sent to Dummy
-2 <- TimeCommand sent to Dummy
-BUG: Unsupported: sending M1NameCommand to Dummy
-BUG: Unsupported: sending M2NameCommand to Dummy
 3 <- ResetCommand sent to M1-A/123
 17 <- TimeCommand sent to M1-A/123
 6 <- M1NameCommand sent to M1-A/123

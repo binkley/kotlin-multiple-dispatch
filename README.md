@@ -29,7 +29,6 @@ Devices run down the left; commands are across the top:
 
 | | Reset | Name (M1) | Name (M2)
 | - | :-: | :-: | :-:
-| **Dummy** | _A_ | - | -
 | **M1A** | _A_ | _B_ | -
 | **M1B** | _A_ | _C_ | -
 | **M2** | _A_ | _D_ | _E_

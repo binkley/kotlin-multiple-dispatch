@@ -11,11 +11,6 @@ private val m2NameCommand = M2NameCommand("BOB", "NANCY")
 fun main() {
     registerAll()
 
-    demo(DummyDevice, ResetCommand)
-    demo(DummyDevice, timeCommand)
-    demo(DummyDevice, m1NameCommand)
-    demo(DummyDevice, m2NameCommand)
-
     demo(m1aDevice, ResetCommand)
     demo(m1aDevice, timeCommand)
     demo(m1aDevice, m1NameCommand)
