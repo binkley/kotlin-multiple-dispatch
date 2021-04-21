@@ -5,12 +5,12 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>hm.binkley.rover</groupId>
-    <artifactId>kotlin-rover</artifactId>
-    <version>5-SNAPSHOT</version>
+    <groupId>hm.binkley.labs</groupId>
+    <artifactId>kotlin-multiple-dispatch</artifactId>
+    <version>0-SNAPSHOT</version>
 
-    <name>Kotlin Rover</name>
-    <description>Kotlin serialization</description>
+    <name>Kotlin Multiple Dispatch</name>
+    <description>Examples for simulating multiple dispatch in Kotlin</description>
 
     <licenses>
         <license>
@@ -21,15 +21,15 @@
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/binkley/kotlin-rover/issues</url>
+        <url>https://github.com/binkley/kotlin-multiple-dispatch/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/binkley/kotlin-rover.git
+        <connection>scm:git:git://github.com/binkley/kotlin-multiple-dispatch.git
         </connection>
-        <developerConnection>scm:git:git@github.com:binkley/kotlin-rover.git
+        <developerConnection>scm:git:git@github.com:binkley/kotlin-multiple-dispatch.git
         </developerConnection>
-        <url>https://github.com/binkley/kotlin-rover</url>
+        <url>https://github.com/binkley/kotlin-multiple-dispatch</url>
     </scm>
 
     <properties>
@@ -48,7 +48,7 @@
         <kotlin.version>1.4.32</kotlin.version>
         <ktlint-maven-plugin.version>1.7.0</ktlint-maven-plugin.version>
         <lombok.version>1.18.20</lombok.version>
-        <main.class>hm.binkley.rover.CStyle</main.class>
+        <main.class>hm.binkley.labs.Main</main.class>
         <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
         <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
