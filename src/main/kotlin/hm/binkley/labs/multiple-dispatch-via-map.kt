@@ -2,6 +2,11 @@ package hm.binkley.labs
 
 import kotlin.reflect.KClass
 
+private val dispatchTable: MutableMap<
+        Pair<KClass<Device<*>>, KClass<Command<*>>>,
+            (Device<*>, Command<*>) -> Int
+        > = mutableMapOf()
+
 @Suppress("UNCHECKED_CAST")
 internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
     noinline lambda: (D, C) -> Int,
@@ -10,11 +15,6 @@ internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
         (D::class as KClass<Device<*>>) to (C::class as KClass<Command<*>>)
     dispatchTable[key] = lambda as (Device<*>, Command<*>) -> Int
 }
-
-private val dispatchTable: MutableMap<
-    Pair<KClass<Device<*>>, KClass<Command<*>>>,
-    (Device<*>, Command<*>) -> Int
-    > = mutableMapOf()
 
 internal inline fun <reified D : Device<D>, reified C : Command<C>> dispatch(
     device: D,
