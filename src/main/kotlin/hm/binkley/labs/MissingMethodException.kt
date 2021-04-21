@@ -1,6 +1,6 @@
 package hm.binkley.labs
 
 class MissingMethodException(
-    command: Command<*>,
     device: Device<*>,
+    command: Command<*>,
 ) : Exception("Missing method for $command to $device")
