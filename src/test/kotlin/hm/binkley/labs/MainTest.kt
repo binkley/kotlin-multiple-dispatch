@@ -26,7 +26,7 @@ BUG: Unsupported: M2NameCommand to M1-A/123
 BUG: Unsupported: M2NameCommand to M1-B/456
 3
 18
-3
+4
 8
         """.trimIndent() + "\n"
     }
