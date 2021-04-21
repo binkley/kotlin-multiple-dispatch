@@ -3,7 +3,7 @@
 align="right"/>
 </a>
 
-# Examples of Multiple Dispatch in Kotlin
+# Examples of Multiple dispatch in Kotlin
 
 This code is a "finger exercise" written for pleasure.
 
@@ -24,7 +24,12 @@ Try `./batect run` for a demonstration as CI would.
 ## TOC
 
 * [Build and try](#build-and-try)
+* [Multiple dispatch](#multiple-dispatch)
 * [Reading](#reading)
+
+---
+
+## Multiple dispatch
 
 ---
 

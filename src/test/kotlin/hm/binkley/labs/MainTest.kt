@@ -11,6 +11,9 @@ internal class MainTest {
             main()
         }
 
-        out shouldBe ""
+        out shouldBe """
+            3
+            BUG: hm.binkley.labs.MissingMethodException: Missing method for TimeCommand(millisSinceEpoch=0) to DummyDevice
+        """.trimIndent() + "\n"
     }
 }
