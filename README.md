@@ -33,7 +33,8 @@ This project demonstrates multiple dispatch for a matrix of combinations:
 | **M1B** | _A_ | _C_ | -
 | **M2** | _A_ | _D_ | _E_
 
-Each capital letter represents a separate unique or shared implementation.
+Each capital letter represents a separate unique or shared implementation 
+(lambda).
 
 See [`main`](./src/main/kotlin/hm/binkley/labs/Main.kt) for a starting
 point.  [`register(lambda)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
