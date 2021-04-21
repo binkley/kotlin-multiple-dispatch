@@ -3,9 +3,10 @@
 align="right"/>
 </a>
 
-# Examples of Multiple dispatch in Kotlin
+# Kotlin Multiple Dispatch
 
-This code is a "finger exercise" written for pleasure.
+This code is a "finger exercise"&mdash;written for pleasure&mdash;of examples
+for simulating multiple dispatch in Kotlin.
 
 ## Build and try
 
