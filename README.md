@@ -22,14 +22,6 @@ Try `./batect run` for a demonstration as CI would.
 
 ---
 
-## TOC
-
-* [Build and try](#build-and-try)
-* [Examples](#examples)
-* [Reading](#reading)
-
----
-
 ## Examples
 
 This project demonstrates multiple dispatch for a matrix of combinations:
