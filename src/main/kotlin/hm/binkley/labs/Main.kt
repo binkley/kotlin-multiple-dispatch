@@ -11,26 +11,25 @@ private val m2NameCommand = M2NameCommand("BOB", "NANCY")
 fun main() {
     registerAll()
 
-    demo(m1aDevice, ResetCommand)
-    demo(m1aDevice, timeCommand)
-    demo(m1aDevice, m1NameCommand)
-    demo(m1aDevice, m2NameCommand)
-
-    demo(m1bDevice, ResetCommand)
-    demo(m1bDevice, timeCommand)
-    demo(m1bDevice, m1NameCommand)
-    demo(m1bDevice, m2NameCommand)
-
-    demo(m2Device, ResetCommand)
-    demo(m2Device, timeCommand)
-    demo(m2Device, m1NameCommand)
-    demo(m2Device, m2NameCommand)
+    for (
+        device in listOf(
+            m1aDevice,
+            m1bDevice,
+            m2Device
+        )
+    )
+        for (
+            command in listOf(
+                ResetCommand,
+                timeCommand,
+                m1NameCommand,
+                m2NameCommand
+            )
+        )
+            demo(device, command)
 }
 
-private inline fun <reified D : Device<D>, reified C : Command<C>> demo(
-    device: D,
-    command: C,
-) {
+private fun demo(device: Device<*>, command: Command<*>) {
     try {
         val result = dispatch(device, command)
         println("$result <- ${command::class.simpleName} sent to $device")

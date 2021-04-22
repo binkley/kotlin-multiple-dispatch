@@ -16,15 +16,11 @@ internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
     dispatchTable[key] = lambda as (Device<*>, Command<*>) -> Int
 }
 
-internal fun <D : Device<D>, C : Command<C>> dispatch(
-    device: D,
-    command: C,
-): Int {
+internal fun dispatch(device: Device<*>, command: Command<*>): Int {
     val deviceType = device::class
     val commandType = command::class
 
-    @Suppress("TYPE_INFERENCE_ONLY_INPUT_TYPES_WARNING")
-    val lambda = dispatchTable.get(deviceType to commandType)
+    val lambda = dispatchTable[deviceType to commandType]
         ?: throw MissingMethodException(device, command)
 
     return lambda(device, command)
