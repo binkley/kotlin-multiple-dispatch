@@ -17,16 +17,14 @@ fun main() {
             m1bDevice,
             m2Device
         )
-    )
-        for (
-            command in listOf(
-                ResetCommand,
-                timeCommand,
-                m1NameCommand,
-                m2NameCommand
-            )
+    ) for (
+        command in listOf(
+            ResetCommand,
+            timeCommand,
+            m1NameCommand,
+            m2NameCommand
         )
-            demo(device, command)
+    ) demo(device, command)
 }
 
 private fun demo(device: Device<*>, command: Command<*>) = try {
