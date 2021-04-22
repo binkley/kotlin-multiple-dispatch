@@ -29,11 +29,9 @@ fun main() {
             demo(device, command)
 }
 
-private fun demo(device: Device<*>, command: Command<*>) {
-    try {
-        val result = dispatch(device, command)
-        println("$result <- ${command::class.simpleName} sent to $device")
-    } catch (e: MissingMethodException) {
-        println("BUG: ${e.message}")
-    }
+private fun demo(device: Device<*>, command: Command<*>) = try {
+    val result = dispatch(device, command)
+    println("$result <- ${command::class.simpleName} sent to $device")
+} catch (e: MissingMethodException) {
+    println("BUG: ${e.message}")
 }
