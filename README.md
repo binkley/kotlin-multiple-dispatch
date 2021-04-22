@@ -27,11 +27,11 @@ Try `./batect run` for a demonstration as CI would.
 This project demonstrates multiple dispatch for a matrix of combinations.
 Devices run down the left; commands are across the top:
 
-| | Reset | Name (M1) | Name (M2)
-| - | :-: | :-: | :-:
-| **M1A** | _A_ | _B_ | -
-| **M1B** | _A_ | _C_ | -
-| **M2** | _A_ | _D_ | _E_
+| | Reset | Time | Name (M1) | Name (M2)
+| - | :-: | :-: | :-: | :-:
+| **M1A** | _A_ | _B_ | _C_ | -
+| **M1B** | _A_ | _B_ | _D_ | -
+| **M2** | _A_ | _E_ | _F_ | _G_
 
 Each capital letter represents a separate unique or shared implementation 
 (lambda).
@@ -40,26 +40,28 @@ See [`main`](./src/main/kotlin/hm/binkley/labs/Main.kt) for a starting
 point.  [`register(lambda)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
 updates the dispatch table;
 [`dispatch(device, component)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
-looks up and dispatches the corresponding lambda.
+looks up and dispatches the corresponding lambda;
+[`registerAll()`](./src/main/kotlin/hm/binkley/labs/register-device-commands.kt)
+sets up the multimethod mappings.
 
 ### Why not other approaches?
 
 Consider this scratch snippet:
 
 ```kotlin
-fun Device<*>.xxx(command: Command<*>): Int =
+fun Device<*>.alternativeDispatch(command: Command<*>): Int =
   throw MissingMethodException(this, command)
-fun M1ADevice.xxx(command: ResetCommand) = 3
+fun M1ADevice.alternativeDispatch(command: ResetCommand) = 3
 
 fun main() {
   // ResetCommand is an singleton object; other values are defined elsewhere
-  m1aDevice.xxx(ResetCommand) // Calls the first `xxx` fun, above
-  m1aDevice.xxx(timeCommand) // Also calls the first `xxx` fun
+  m1aDevice.alternativeDispatch(ResetCommand) // Calls the first `xxx` fun, above
+  m1aDevice.alternativeDispatch(timeCommand) // Also calls the first `xxx` fun
 }
 ```
 
-The compiler correctly warns that `M1ADevice.xxx(TimeCommand)` is never
-called: Extension functions do not consider type specialization.
+The compiler correctly warns that `M1ADevice.alternativeDispatch(TimeCommand)`
+is never called: Extension functions do not consider type specialization.
 
 ---
 

@@ -10,7 +10,7 @@ internal fun registerAll() {
     register { d: M1BDevice, c: TimeCommand -> d.runTime(c) }
     register { d: M2Device, c: TimeCommand -> d.runTime(c) }
     // Name command has different versions
-    // No name command v2 defined for the M1 devices
+    // No v2 name command defined for the M1 devices
     register { d: M1ADevice, c: M1NameCommand -> d.runName(c) }
     register { d: M1BDevice, c: M1NameCommand -> d.runName(c) }
     register { d: M2Device, c: M1NameCommand -> d.runName(c) }
