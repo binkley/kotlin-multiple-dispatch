@@ -7,6 +7,7 @@ private val dispatchTable: MutableMap<
     (Device<*>, Command<*>) -> Int
     > = mutableMapOf()
 
+/** @todo See if this can be simplified like [dispatch] */
 @Suppress("UNCHECKED_CAST")
 internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
     noinline lambda: (D, C) -> Int,
@@ -16,6 +17,10 @@ internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
     dispatchTable[key] = lambda as (Device<*>, Command<*>) -> Int
 }
 
+/**
+ * *NB* &mdash; Using `reified` removed the need to look up class type in the
+ * function body, however lowers readability.
+ */
 internal fun dispatch(device: Device<*>, command: Command<*>): Int {
     val deviceType = device::class
     val commandType = command::class
