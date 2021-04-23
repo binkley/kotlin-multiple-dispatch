@@ -2,9 +2,9 @@ package hm.binkley.labs
 
 internal fun registerAll() {
     // Reset command is common to all
-    register { d: M1ADevice, _: ResetCommand -> d.runReset() }
-    register { d: M1BDevice, _: ResetCommand -> d.runReset() }
-    register { d: M2Device, _: ResetCommand -> d.runReset() }
+    register { _: M1ADevice, _: ResetCommand -> runReset() }
+    register { _: M1BDevice, _: ResetCommand -> runReset() }
+    register { _: M2Device, _: ResetCommand -> runReset() }
     // Time command varies by device
     register { d: M1ADevice, c: TimeCommand -> d.runTime(c) }
     register { d: M1BDevice, c: TimeCommand -> d.runTime(c) }
