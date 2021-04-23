@@ -1,7 +1,7 @@
 package hm.binkley.labs
 
 data class M2Device(
-    private val serialNo: Long,
+    private val serialNo: String,
     private val carrierCountry: String,
 ) : Device<M2Device> {
     fun runTime(c: TimeCommand) = (18 * c.millisSinceEpoch).toInt()

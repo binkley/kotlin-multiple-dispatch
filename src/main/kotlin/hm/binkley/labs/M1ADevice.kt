@@ -1,7 +1,7 @@
 package hm.binkley.labs
 
 data class M1ADevice(
-    private val serialNo: Long,
+    private val serialNo: String,
 ) : M1Device<M1ADevice> {
     fun runName(c: M1NameCommand) = 2 * c.name.length
 
