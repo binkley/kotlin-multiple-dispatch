@@ -1,9 +1,12 @@
 <a href="./LICENSE.md">
-<img src="./images/public-domain.png" alt="Public Domain"
-align="right"/>
+<img src="./images/public-domain.png" alt="Public Domain" align="right"/>
 </a>
 
 # Kotlin Multiple Dispatch
+
+[![CI](https://github.com/binkley/kotlin-multiple-dispatch/workflows/build/badge.svg)](https://github.com/binkley/kotlin-multiple-dispatch/actions)
+[![issues](https://img.shields.io/github/issues/binkley/kotlin-multiple-dispatch.svg)](https://github.com/binkley/kotlin-multiple-dispatch/issues/)
+[![Public Domain](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](http://unlicense.org/)
 
 This code is a "finger exercise"&mdash;written for pleasure&mdash;of examples
 for simulating multiple dispatch in Kotlin.
@@ -33,7 +36,7 @@ Devices run down the left; commands are across the top:
 | **M1B** | _A_ | _B_ | _D_ | -
 | **M2** | _A_ | _E_ | _F_ | _G_
 
-Each capital letter represents a separate unique or shared implementation 
+Each capital letter represents a separate unique or shared implementation
 (lambda).
 
 See [`main`](./src/main/kotlin/hm/binkley/labs/Main.kt) for a starting
@@ -50,13 +53,13 @@ Consider this scratch snippet:
 
 ```kotlin
 fun Device<*>.alternativeDispatch(command: Command<*>): Int =
-  throw MissingMethodException(this, command)
+    throw MissingMethodException(this, command)
 fun M1ADevice.alternativeDispatch(command: ResetCommand) = 3
 
 fun main() {
-  // ResetCommand is an singleton object; other values are defined elsewhere
-  m1aDevice.alternativeDispatch(ResetCommand) // Calls the first `xxx` fun, above
-  m1aDevice.alternativeDispatch(timeCommand) // Also calls the first `xxx` fun
+    // ResetCommand is an singleton object; other values are defined elsewhere
+    m1aDevice.alternativeDispatch(ResetCommand) // Calls the first `xxx` fun, above
+    m1aDevice.alternativeDispatch(timeCommand) // Also calls the first `xxx` fun
 }
 ```
 
