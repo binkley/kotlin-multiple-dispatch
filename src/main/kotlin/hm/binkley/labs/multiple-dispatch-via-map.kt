@@ -21,12 +21,12 @@ internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
  * *NB* &mdash; Using `reified` removed the need to look up class type in the
  * function body, however lowers readability.
  */
-internal fun dispatch(device: Device<*>, command: Command<*>): Int {
-    val deviceType = device::class
+internal fun Device<*>.dispatch(command: Command<*>): Int {
+    val deviceType = this::class
     val commandType = command::class
 
     val lambda = dispatchTable[deviceType to commandType]
-        ?: throw MissingMethodException(device, command)
+        ?: throw MissingMethodException(this, command)
 
-    return lambda(device, command)
+    return lambda(this, command)
 }
