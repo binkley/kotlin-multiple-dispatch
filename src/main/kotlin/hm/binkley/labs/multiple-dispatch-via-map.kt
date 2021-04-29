@@ -2,23 +2,23 @@ package hm.binkley.labs
 
 import kotlin.reflect.KClass
 
+private typealias DeviceType = KClass<Device<*>>
+private typealias CommandType = KClass<Command<*>>
+
 private val dispatchTable: MutableMap<
-    Pair<KClass<Device<*>>, KClass<Command<*>>>,
-    (Device<*>, Command<*>) -> Int
+    Pair<DeviceType, CommandType>, (Device<*>, Command<*>) -> Int
     > = mutableMapOf()
 
-/** @todo See if this can be simplified like [dispatch] */
 @Suppress("UNCHECKED_CAST")
-internal inline fun <reified D : Device<D>, reified C : Command<C>> register(
-    noinline lambda: (D, C) -> Int,
-) {
-    val key: Pair<KClass<Device<*>>, KClass<Command<*>>> =
-        (D::class as KClass<Device<*>>) to (C::class as KClass<Command<*>>)
+internal inline fun <reified D : Device<D>, reified C : Command<C>>
+register(noinline lambda: (D, C) -> Int) {
+    val key: Pair<DeviceType, CommandType> =
+        (D::class as DeviceType) to (C::class as CommandType)
     dispatchTable[key] = lambda as (Device<*>, Command<*>) -> Int
 }
 
 /**
- * *NB* &mdash; Using `reified` removed the need to look up class type in the
+ * *NB* &mdash; Using `reified` removes the need to look up class type in the
  * function body, however lowers readability.
  */
 internal fun Device<*>.dispatch(command: Command<*>): Int {

@@ -1,6 +1,6 @@
 package hm.binkley.labs
 
-data class M2Device(
+class M2Device(
     private val serialNo: String,
     private val carrierCountry: String,
 ) : Device<M2Device> {
