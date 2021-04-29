@@ -44,7 +44,7 @@ point.  [`register(lambda)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch
 updates the dispatch table;
 [`dispatch(device, component)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
 looks up and dispatches the corresponding lambda;
-[`registerAll()`](./src/main/kotlin/hm/binkley/labs/register-device-commands.kt)
+[`registerAll()`](src/main/kotlin/hm/binkley/labs/Main.kt)
 sets up the multimethod mappings.
 
 ### Why not other approaches?

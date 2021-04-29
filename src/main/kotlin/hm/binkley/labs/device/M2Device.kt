@@ -1,4 +1,11 @@
-package hm.binkley.labs
+package hm.binkley.labs.device
+
+import hm.binkley.labs.Device
+import hm.binkley.labs.command.M1NameCommand
+import hm.binkley.labs.command.M2NameCommand
+import hm.binkley.labs.command.M2NameResponse
+import hm.binkley.labs.command.TimeCommand
+import hm.binkley.labs.command.TimeResponse
 
 class M2Device(
     private val serialNo: String,

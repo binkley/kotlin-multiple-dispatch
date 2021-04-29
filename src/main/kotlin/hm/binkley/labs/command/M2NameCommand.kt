@@ -1,4 +1,6 @@
-package hm.binkley.labs
+package hm.binkley.labs.command
+
+import hm.binkley.labs.Command
 
 data class M2NameResponse(
     val success: Boolean,

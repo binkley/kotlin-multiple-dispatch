@@ -1,4 +1,6 @@
-package hm.binkley.labs
+package hm.binkley.labs.device
+
+import hm.binkley.labs.command.M1NameCommand
 
 class M1BDevice(
     private val serialNo: String,
