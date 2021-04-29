@@ -4,10 +4,14 @@ class M2Device(
     private val serialNo: String,
     private val carrierCountry: String,
 ) : Device<M2Device> {
-    fun runTime(c: TimeCommand) = (18 * c.millisSinceEpoch).toInt()
+    @Suppress("UNUSED_PARAMETER")
+    fun runTime(c: TimeCommand) = TimeResponse(7L)
 
-    fun runName(c: M1NameCommand) = c.name.length + 1 // An oddball case!
-    fun runName(c: M2NameCommand) = c.humanName.length + c.internalName.length
+    @Suppress("UNUSED_PARAMETER")
+    fun runName(c: M1NameCommand) = true
+
+    @Suppress("UNUSED_PARAMETER")
+    fun runName(c: M2NameCommand) = M2NameResponse(true)
 
     override fun toString() = "M2/$serialNo/$carrierCountry"
 }

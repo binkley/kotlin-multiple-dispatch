@@ -1,7 +1,6 @@
 package hm.binkley.labs
 
 /** Reset is identical for all devices. */
-object ResetCommand : Command<ResetCommand>
+object ResetCommand : Command<ResetCommand, Unit>
 
-/** Reset is identical for all devices. */
-internal fun runReset() = 3
+internal fun runReset() = Unit

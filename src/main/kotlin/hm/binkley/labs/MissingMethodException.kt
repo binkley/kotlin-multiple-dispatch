@@ -2,7 +2,7 @@ package hm.binkley.labs
 
 class MissingMethodException(
     device: Device<*>,
-    command: Command<*>,
+    command: Command<*, *>,
 ) : UnsupportedOperationException(
     "Unsupported: sending ${command::class.simpleName} to $device"
 )

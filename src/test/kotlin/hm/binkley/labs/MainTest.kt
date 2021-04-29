@@ -12,18 +12,18 @@ internal class MainTest {
         }
 
         out shouldBe """
-3 <- ResetCommand sent to M1-A/1-2-3
-17 <- TimeCommand sent to M1-A/1-2-3
-6 <- M1NameCommand sent to M1-A/1-2-3
+kotlin.Unit <- ResetCommand sent to M1-A/1-2-3
+TimeResponse(millisAdjusted=3) <- TimeCommand sent to M1-A/1-2-3
+true <- M1NameCommand sent to M1-A/1-2-3
 BUG: Unsupported: sending M2NameCommand to M1-A/1-2-3
-3 <- ResetCommand sent to M1-B/4-5-6
-17 <- TimeCommand sent to M1-B/4-5-6
-9 <- M1NameCommand sent to M1-B/4-5-6
+kotlin.Unit <- ResetCommand sent to M1-B/4-5-6
+TimeResponse(millisAdjusted=3) <- TimeCommand sent to M1-B/4-5-6
+false <- M1NameCommand sent to M1-B/4-5-6
 BUG: Unsupported: sending M2NameCommand to M1-B/4-5-6
-3 <- ResetCommand sent to M2/7-8-9-0/SG
-18 <- TimeCommand sent to M2/7-8-9-0/SG
-4 <- M1NameCommand sent to M2/7-8-9-0/SG
-8 <- M2NameCommand sent to M2/7-8-9-0/SG
+kotlin.Unit <- ResetCommand sent to M2/7-8-9-0/SG
+TimeResponse(millisAdjusted=7) <- TimeCommand sent to M2/7-8-9-0/SG
+true <- M1NameCommand sent to M2/7-8-9-0/SG
+M2NameResponse(success=true) <- M2NameCommand sent to M2/7-8-9-0/SG
         """.trimIndent() + "\n"
     }
 }
