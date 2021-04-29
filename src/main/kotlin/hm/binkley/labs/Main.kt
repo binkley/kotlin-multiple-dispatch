@@ -22,18 +22,18 @@ fun main() {
     registerAll()
 
     for (
-    device in listOf(
-        m1aDevice,
-        m1bDevice,
-        m2Device
-    )
+        device in listOf(
+            m1aDevice,
+            m1bDevice,
+            m2Device
+        )
     ) for (
-    command in listOf(
-        ResetCommand,
-        timeCommand,
-        m1NameCommand,
-        m2NameCommand
-    )
+        command in listOf(
+            ResetCommand,
+            timeCommand,
+            m1NameCommand,
+            m2NameCommand
+        )
     ) device.demo(command)
 
     println()
