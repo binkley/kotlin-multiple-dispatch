@@ -25,10 +25,16 @@ fun main() {
             m2NameCommand
         )
     ) device.demo(command)
+
+    println()
+
+    // Example of handling specific response type
+    val timeResponse: TimeResponse = m1aDevice.send(timeCommand)
+    println("$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice")
 }
 
 private fun Device<*>.demo(command: Command<*, *>) = try {
-    val result = this.dispatch<Any>(command)
+    val result = this.send<Any>(command)
     println("$result <- ${command::class.simpleName} sent to $this")
 } catch (e: MissingMethodException) {
     println("BUG: ${e.message}")

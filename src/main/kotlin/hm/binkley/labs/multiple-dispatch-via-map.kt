@@ -21,7 +21,7 @@ register(noinline lambda: (D, C) -> R) {
  * *NB* &mdash; Using `reified` removes the need to look up class type in the
  * function body, however lowers readability.
  */
-internal fun <R> Device<*>.dispatch(command: Command<*, *>): R {
+internal fun <R> Device<*>.send(command: Command<*, *>): R {
     val deviceType = this::class
     val commandType = command::class
 
