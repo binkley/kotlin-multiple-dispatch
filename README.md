@@ -4,9 +4,10 @@
 
 # Kotlin Multiple Dispatch
 
-[![CI](https://github.com/binkley/kotlin-multiple-dispatch/workflows/build/badge.svg)](https://github.com/binkley/kotlin-multiple-dispatch/actions)
+[![build](https://github.com/binkley/kotlin-multiple-dispatch/workflows/build/badge.svg)](https://github.com/binkley/kotlin-multiple-dispatch/actions)
 [![issues](https://img.shields.io/github/issues/binkley/kotlin-multiple-dispatch.svg)](https://github.com/binkley/kotlin-multiple-dispatch/issues/)
-[![Public Domain](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](http://unlicense.org/)
+[![vulnerabilities](https://snyk.io/test/github/binkley/kotlin-multiple-dispatch/badge.svg)](https://snyk.io/test/github/binkley/kotlin-multiple-dispatch)
+[![license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](http://unlicense.org/)
 
 This code is a "finger exercise"&mdash;written for pleasure&mdash;of examples
 for simulating multiple dispatch in Kotlin.
