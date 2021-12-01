@@ -39,17 +39,17 @@
         <!-- @formatter:off -->
         <buildplan-maven-plugin.version>1.4</buildplan-maven-plugin.version>
         <dependency-check-maven.version>6.2.2</dependency-check-maven.version>
-        <detekt-maven-plugin.version>1.17.1</detekt-maven-plugin.version>
+        <detekt-maven-plugin.version>1.18.1.1</detekt-maven-plugin.version>
         <failIfNoTests>true</failIfNoTests>
         <failsafe.printSummary>false</failsafe.printSummary>
         <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
         <java.charset>UTF-8</java.charset>
-        <jdk.version>11</jdk.version>
+        <jdk.version>17</jdk.version>
         <junit.version>5.8.0-RC1</junit.version>
         <kotest.version>4.6.2</kotest.version>
         <kotlin.code.style>official</kotlin.code.style>
-        <kotlin.version>1.5.30</kotlin.version>
-        <ktlint-maven-plugin.version>1.9.0</ktlint-maven-plugin.version>
+        <kotlin.version>1.6.0</kotlin.version>
+        <ktlint-maven-plugin.version>1.11.0</ktlint-maven-plugin.version>
         <lombok.version>1.18.20</lombok.version>
         <main.class>hm.binkley.labs.Main</main.class>
         <maven-assembly-plugin.version>3.3.0</maven-assembly-plugin.version>
@@ -299,7 +299,7 @@
                                         <limit>
                                             <counter>INSTRUCTION</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>98%</minimum>
+                                            <minimum>97%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
