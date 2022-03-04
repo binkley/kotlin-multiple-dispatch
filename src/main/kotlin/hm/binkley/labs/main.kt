@@ -16,5 +16,10 @@ val m1NameCommand = M1NameCommand("BOB")
 val m2NameCommand = M2NameCommand("BOB", "NANCY")
 
 fun main() {
+    println("== DEMO WITH MAP")
     runDemoWithMap()
+
+    println()
+    println("== DEMO WITH CONTEXT")
+    runDemoWithContext()
 }

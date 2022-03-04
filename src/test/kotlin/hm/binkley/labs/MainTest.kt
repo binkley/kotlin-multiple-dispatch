@@ -12,6 +12,7 @@ internal class MainTest {
         }
 
         out shouldBe """
+== DEMO WITH MAP
 kotlin.Unit <- ResetCommand sent to M1-A/1-2-3
 TimeResponse(millisAdjusted=1) <- TimeCommand sent to M1-A/1-2-3
 true <- M1NameCommand sent to M1-A/1-2-3
@@ -26,6 +27,35 @@ false <- M1NameCommand sent to M2/7-8-9-0/SG
 M2NameResponse(success=true) <- M2NameCommand sent to M2/7-8-9-0/SG
 
 TimeResponse(millisAdjusted=1) <- TimeCommand sent to M1-A/1-2-3
+
+== DEMO WITH CONTEXT
+!!! IMPLEMENT !!!
+null <- ResetCommand sent to M1-A/1-2-3
+!!! IMPLEMENT !!!
+null <- TimeCommand sent to M1-A/1-2-3
+!!! IMPLEMENT !!!
+null <- M1NameCommand sent to M1-A/1-2-3
+!!! IMPLEMENT !!!
+null <- M2NameCommand sent to M1-A/1-2-3
+!!! IMPLEMENT !!!
+null <- ResetCommand sent to M1-B/4-5-6
+!!! IMPLEMENT !!!
+null <- TimeCommand sent to M1-B/4-5-6
+!!! IMPLEMENT !!!
+null <- M1NameCommand sent to M1-B/4-5-6
+!!! IMPLEMENT !!!
+null <- M2NameCommand sent to M1-B/4-5-6
+!!! IMPLEMENT !!!
+null <- ResetCommand sent to M2/7-8-9-0/SG
+!!! IMPLEMENT !!!
+null <- TimeCommand sent to M2/7-8-9-0/SG
+!!! IMPLEMENT !!!
+null <- M1NameCommand sent to M2/7-8-9-0/SG
+!!! IMPLEMENT !!!
+null <- M2NameCommand sent to M2/7-8-9-0/SG
+
+!!! IMPLEMENT !!!
+null <- TimeCommand sent to M1-A/1-2-3
         """.trimIndent() + "\n"
     }
 }

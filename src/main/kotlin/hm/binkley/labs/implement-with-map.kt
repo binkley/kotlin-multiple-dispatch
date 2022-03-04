@@ -23,7 +23,7 @@ register(noinline command: (D, C) -> R) {
  * *NB* &mdash; Using `reified` removes the need to look up class type in the
  * function body, however lowers readability.
  */
-internal fun <R> SomeDevice.send(command: SomeCommand): R {
+internal fun <R> SomeDevice.sendWithMap(command: SomeCommand): R {
     val deviceType = this::class
     val commandType = command::class
 

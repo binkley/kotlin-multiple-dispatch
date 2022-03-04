@@ -31,12 +31,12 @@ fun runDemoWithMap() {
     println()
 
     // Example of handling specific response type
-    val timeResponse: TimeResponse = m1aDevice.send(timeCommand)
+    val timeResponse: TimeResponse = m1aDevice.sendWithMap(timeCommand)
     println("$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice")
 }
 
 private fun Device<*>.demoWithMap(command: Command<*, *>) = try {
-    val result = this.send<Any>(command)
+    val result = this.sendWithMap<Any>(command)
     println("$result <- ${command::class.simpleName} sent to $this")
 } catch (e: MissingMethodException) {
     println("BUG: ${e.message}")
