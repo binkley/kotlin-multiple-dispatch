@@ -40,12 +40,12 @@ Devices run down the left; commands are across the top:
 Each capital letter represents a separate unique or shared implementation
 (lambda).
 
-See [`main`](./src/main/kotlin/hm/binkley/labs/Main.kt) for a starting
+See [`main`](./src/main/kotlin/hm/binkley/labs/main.kt) for a starting
 point.  [`register(lambda)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
 updates the dispatch table;
 [`dispatch(device, component)`](./src/main/kotlin/hm/binkley/labs/multiple-dispatch-via-map.kt)
 looks up and dispatches the corresponding lambda;
-[`registerAll()`](src/main/kotlin/hm/binkley/labs/Main.kt)
+[`registerAll()`](src/main/kotlin/hm/binkley/labs/main.kt)
 sets up the multimethod mappings.
 
 ### Why not other approaches?
