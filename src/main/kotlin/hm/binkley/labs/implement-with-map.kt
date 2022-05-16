@@ -14,8 +14,7 @@ private val dispatchTable: MutableMap<
 @Suppress("UNCHECKED_CAST")
 internal inline fun <reified D : Device<D>, reified C : Command<C, R>, R>
 register(noinline command: (D, C) -> R) {
-    val key: Pair<DeviceType, CommandType> =
-        (D::class as DeviceType) to (C::class as CommandType)
+    val key = (D::class as DeviceType) to (C::class as CommandType)
     dispatchTable[key] = command as SendCommand
 }
 
