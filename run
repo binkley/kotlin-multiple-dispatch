@@ -2,9 +2,9 @@
 # shellcheck disable=SC2214,SC2215
 
 # Edit these to suit
-readonly package=hm.binkley.rover
-readonly artifactId=kotlin-rover
-readonly version=5-SNAPSHOT
+readonly package=hm.binkley.labs
+readonly artifactId=kotlin-multiple-dispatch
+readonly version=0-SNAPSHOT
 
 # No editable parts below here
 
