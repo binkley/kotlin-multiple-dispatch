@@ -8,23 +8,25 @@ fun runDemoWithContext() {
         device in listOf(
             m1aDevice,
             m1bDevice,
-            m2Device
+            m2Device,
         )
-    ) for (
-        command in listOf(
-            ResetCommand,
-            timeCommand,
-            m1NameCommand,
-            m2NameCommand
-        )
-    ) device.demoWithContext(command)
+        ) for (
+            command in listOf(
+                ResetCommand,
+                timeCommand,
+                m1NameCommand,
+                m2NameCommand,
+            )
+            ) device.demoWithContext(command)
 
     println()
 
     // Example of handling specific response type -- see map demo
     // Example of handling specific response type
     val timeResponse: TimeResponse = m1aDevice.sendWithContext(timeCommand)
-    println("$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice")
+    println(
+        "$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice"
+    )
 }
 
 private fun Device<*>.demoWithContext(command: Command<*, *>) {

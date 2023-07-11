@@ -16,7 +16,7 @@ class M2Device(
     fun sendName1ToM2(c: M1NameCommand) = 0 == c.name.length % 2
 
     fun sendName2ToM2(c: M2NameCommand) = M2NameResponse(
-        0 == (c.humanName.length + c.internalName.length) % 2
+        0 == (c.humanName.length + c.internalName.length) % 2,
     )
 
     override fun toString() = "M2/$serialNo/$carrierCountry"

@@ -17,22 +17,24 @@ fun runDemoWithMap() {
         device in listOf(
             m1aDevice,
             m1bDevice,
-            m2Device
+            m2Device,
         )
-    ) for (
-        command in listOf(
-            ResetCommand,
-            timeCommand,
-            m1NameCommand,
-            m2NameCommand
-        )
-    ) device.demoWithMap(command)
+        ) for (
+            command in listOf(
+                ResetCommand,
+                timeCommand,
+                m1NameCommand,
+                m2NameCommand,
+            )
+            ) device.demoWithMap(command)
 
     println()
 
     // Example of handling specific response type
     val timeResponse: TimeResponse = m1aDevice.sendWithMap(timeCommand)
-    println("$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice")
+    println(
+        "$timeResponse <- ${timeCommand::class.simpleName} sent to $m1aDevice"
+    )
 }
 
 private fun Device<*>.demoWithMap(command: Command<*, *>) = try {

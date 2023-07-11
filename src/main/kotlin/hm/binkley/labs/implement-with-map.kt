@@ -9,7 +9,7 @@ private typealias DeviceType = KClass<SomeDevice>
 private typealias CommandType = KClass<SomeCommand>
 
 private val dispatchTable: MutableMap<
-    Pair<DeviceType, CommandType>, SendCommand> = mutableMapOf()
+    Pair<DeviceType, CommandType>, SendCommand,> = mutableMapOf()
 
 @Suppress("UNCHECKED_CAST")
 internal inline fun <reified D : Device<D>, reified C : Command<C, R>, R>
