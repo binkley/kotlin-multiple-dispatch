@@ -6,6 +6,7 @@ align="right" width="20%" height="auto"/>
 # Kotlin Multiple Dispatch
 
 [![build](https://github.com/binkley/kotlin-multiple-dispatch/workflows/build/badge.svg)](https://github.com/binkley/kotlin-multiple-dispatch/actions)
+[![pull requests](https://img.shields.io/github/issues-pr/binkley/kotlin-multiple-dispatch.svg)](https://github.com/binkley/kotlin-multiple-dispatch/pulls)
 [![issues](https://img.shields.io/github/issues/binkley/kotlin-multiple-dispatch.svg)](https://github.com/binkley/kotlin-multiple-dispatch/issues/)
 [![vulnerabilities](https://snyk.io/test/github/binkley/kotlin-multiple-dispatch/badge.svg)](https://snyk.io/test/github/binkley/kotlin-multiple-dispatch)
 [![license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](http://unlicense.org/)
