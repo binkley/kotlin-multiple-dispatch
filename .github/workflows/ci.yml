@@ -42,6 +42,3 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-
-      - name: Build and test with Maven under Batect
-        run: ./batect --permanently-enable-telemetry build
